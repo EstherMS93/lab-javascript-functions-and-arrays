@@ -1,19 +1,83 @@
 // Iteration #1: Find the maximum
-
+function maxOfTwoNumbers(a, b) {
+if(a > b) {
+  return a;
+}
+else {
+  return b;
+}
+}
 
 // Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+const words = [
+  'mystery', 
+  'brother', 
+  'aviator', 
+  'crocodile', 
+  'pearl', 
+  'orchard', 
+  'crackpot'
+];
+function findLongestWord(array) {
+  if (array.length === 0) {
+  return null
+}
+  let longest = "";
+  for (let i = 0; i < array.length; i++) {
+
+if (array[i].length > longest.length) {
+  longest = array[i]
+}
+  }
+  return longest
+}
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sumNumbers(NList) {
+  if (NList.length === 0) {
+  return 0 
+}
+  let sum = 0; NList.forEach(function(NList) {sum += NList;});
+    return sum;
+}
+let total = sumNumbers(NList);
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function averageNumbers(array) {
+  return sum(array) / array.length;
+}
+
+function sum(array) {
+  var sum = 0;
+  array.forEach(function(array) {
+      sum += array;
+  });
+  return sum;
+}
+
+var numbers = [2, 6, 9, 10, 7, 4, 1, 9];
+var average = averageNumbers(numbers);
+console.log(average);
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+function averageWordLength(array) {
+  return avg(array) / array.length;
+}
+
+function avg(array) {
+  var avg = 0;
+  array.forEach(function(array) {
+      avg += array.length;
+  });
+  return avg;
+}
+const averageLength = averageWordLength(words);
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -29,7 +93,15 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
-
+function uniquifyArray(array) {
+  var index = [];
+  for (var i = 0; i < array.length; i++) {
+     if (index.indexOf(array[j]) == -1) {
+      index.push(array[j]);
+     }
+  }
+        return index; 
+}
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
@@ -47,6 +119,8 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+
 
 // Iteration #8: Bonus
 
